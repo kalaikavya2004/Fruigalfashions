@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo Code Exchange</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        input, button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .promo-list, .friends-list {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .invite {
+            background: #007bff;
+            color: white;
+        }
+        .invite:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Promo Code Exchange</h2>
+        <input type="text" id="promoCode" placeholder="Enter your promo code" required>
+        <button onclick="addPromoCode()">Submit Code</button>
+        
+        <div class="promo-list">
+            <h3>Available Promo Codes</h3>
+            <ul id="promoList"></ul>
+        </div>
+        
+        <h3>Friends List</h3>
+        <input type="text" id="friendName" placeholder="Enter friend's name">
+        <button onclick="addFriend()">Add Friend</button>
+        <ul id="friendList"></ul>
+    </div>
+
+    <script>
+        function addPromoCode() {
+            let code = document.getElementById("promoCode").value;
+            if(code) {
+                let li = document.createElement("li");
+                li.textContent = code;
+                document.getElementById("promoList").appendChild(li);
+                document.getElementById("promoCode").value = "";
+            }
+        }
+        
+        function addFriend() {
+            let name = document.getElementById("friendName").value;
+            if(name) {
+                let li = document.createElement("li");
+                li.textContent = name + " ";
+                
+                let inviteBtn = document.createElement("button");
+                inviteBtn.textContent = "Invite";
+                inviteBtn.classList.add("invite");
+                inviteBtn.onclick = function() { inviteFriend(name); };
+                
+                li.appendChild(inviteBtn);
+                document.getElementById("friendList").appendChild(li);
+                document.getElementById("friendName").value = "";
+            }
+        }
+        
+        function inviteFriend(name) {
+            alert("Invite sent to " + name + "!");
+        }
+    </script>
+</body>
+</html>

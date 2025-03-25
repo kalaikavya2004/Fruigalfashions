@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CouponZ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">CouponZ</a>
+            <div class="search-box">
+                <input type="text" placeholder="Search">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="submit-button">
+                <button>Submit a Coupon</button>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Hot Deal</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <a href="#" class="login-button">Login/Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="featured-merchant">
+            <div class="merchant-content">
+                <img src="merchant_logo.png" alt="Merchant Logo">
+                <h2>JAMES AND SONS</h2>
+                <p>This is a multi-national company in the world. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="advertisement">
+                <p>Advertisement</p>
+            </div>
+        </section>
+
+        <section class="all-categories">
+            <h2>All Categories</h2>
+            <div class="category-filter">
+                <div class="category-options">
+                    <button class="active">Smartphon & Mobile</button>
+                    <button>Fumiture</button>
+                    <button>Smartphon & Hobir</button>
+                    <button>Home & Decor</button>
+                    <button>Fittness Equipment</button>
+                    <button>Lifestyle</button>
+                    <button>Beauty</button>
+                    <button>Travel</button>
+                </div>
+                <div class="filter-options">
+                    <div class="sort-by">
+                        <label for="sort">Sort By:</label>
+                        <select name="sort" id="sort">
+                            <option value="popularity">Popularity</option>
+                            <option value="latest">Latest</option>
+                        </select>
+                    </div>
+                    <div class="view-options">
+                        <button><i class="fas fa-th-list"></i></button>
+                        <button><i class="fas fa-th-large"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coupon-grid">
+                <div class="coupon">
+                    <img src="coupon1.jpg" alt="Coupon 1">
+                    <h3>Special Flash Sale</h3>
+                    <p>Get 87% discount on every single categories, to hurry</p>
+                    <a href="#">More Details</a>
+                </div>
+
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 CouponZ</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

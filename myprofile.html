@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Sidebar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            right: -260px;
+            background: white;
+            box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.2);
+            transition: right 0.3s ease-in-out;
+        }
+        .sidebar.active {
+            right: 0;
+        }
+        .profile-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    
+    <!-- Profile Icon -->
+    <div class="profile-icon" onclick="toggleSidebar()">
+        <i class="fas fa-user"></i>
+    </div>
+
+    <!-- Sidebar Profile -->
+    <div id="sidebar" class="sidebar p-6">
+        <button onclick="toggleSidebar()" class="absolute top-4 right-4 text-gray-600 text-xl">&times;</button>
+        <div class="flex flex-col items-center">
+            <img src="https://placehold.co/100x100" class="w-24 h-24 rounded-full border-4 border-white shadow-lg" alt="Profile Picture">
+            <h2 class="text-xl font-bold mt-3">Hembo Tingor</h2>
+            <p class="text-gray-600 italic">Web Designer</p>
+        </div>
+        <hr class="my-4">
+        <div class="text-gray-700">
+            <p><strong>Email:</strong> rtng@gmail.com</p>
+            <p><strong>Phone:</strong> 9897989898</p>
+            <h3 class="text-lg font-bold mt-4">Projects</h3>
+            <p><strong>Recent:</strong> Sam Disuja</p>
+            <p><strong>Most Viewed:</strong> Dinoter Husainm</p>
+        </div>
+        <div class="flex justify-around mt-4">
+            <a href="https://www.facebook.com" class="text-blue-600" target="_blank">
+                <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://twitter.com" class="text-blue-400" target="_blank">
+                <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="https://www.instagram.com" class="text-pink-600" target="_blank">
+                <i class="fab fa-instagram fa-lg"></i>
+            </a>
+        </div>
+        
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            if (sidebar.classList.contains("active")) {
+                sidebar.classList.remove("active");
+            } else {
+                sidebar.classList.add("active");
+            }
+        }
+
+        document.addEventListener("click", function(event) {
+            var sidebar = document.getElementById("sidebar");
+            var profileIcon = document.querySelector(".profile-icon");
+
+            if (!sidebar.contains(event.target) && !profileIcon.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    </script>
+</body>
+</html>

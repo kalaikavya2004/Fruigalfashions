@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #d99878, #ece1cf, #c67c50);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+input, button {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+span {
+    color: blue;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+p {
+    color: red;
+    font-size: 14px;
+}
+

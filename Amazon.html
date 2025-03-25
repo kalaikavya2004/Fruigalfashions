@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Offers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .offer-box {
+            padding: 15px;
+            margin: 10px 0;
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .offer-box:hover {
+            background: #ffcc00;
+            border-color: #ff9900;
+            transform: scale(1.02);
+        }
+        .dropdown {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            background: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Amazon Offers</h1>
+        <select class="dropdown">
+            <option>Select Offer Category</option>
+            <option>Electronics</option>
+            <option>Fashion</option>
+            <option>Home & Kitchen</option>
+        </select>
+        
+        <div class="offer-box" onclick="redirectToDostPay()">
+            <h3>Amazon Deal 1</h3>
+            <p>Get up to 50% off on electronics. Click to grab the deal!</p>
+        </div>
+        <div class="offer-box" onclick="redirectToDostPay()">
+            <h3>Amazon Deal 2</h3>
+            <p>Flat 30% discount on fashion brands. Limited time offer!</p>
+        </div>
+    </div>
+    
+    <script>
+        function redirectToDostPay() {
+            window.location.href = 'https://dostpay.com';
+        }
+    </script>
+</body>
+</html>

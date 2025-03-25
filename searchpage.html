@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CouponZ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">CouponZ</a>
+            <div class="search-box">
+                <input type="text" placeholder="Search">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="submit-button">
+                <button>Submit a Coupon</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <aside class="sidebar">
+            <section class="all-categories">
+                <h3>All Categories</h3>
+                <ul>
+                    <li><a href="#">Smartin & Mobile</a></li>
+                    <li><a href="#">Fucsiture</a></li>
+                    <li><a href="#">Smartphon & Maher</a></li>
+                    <li><a href="#">Home & Deuw</a></li>
+                    <li><a href="#">Home & Decor</a></li>
+                    <li><a href="#">Fittness Equipment</a></li>
+                    <li><a href="#">Hert</a></li>
+                    <li><a href="#">Lifestyle</a></li>
+                    <li><a href="#">Online Store</a></li>
+                </ul>
+            </section>
+
+            <section class="by-price">
+                <h3>By: Price</h3>
+                <ul>
+                    <li><a href="#">$24</a></li>
+                    <li><a href="#">$54</a></li>
+                    <li><a href="#">$74</a></li>
+                </ul>
+            </section>
+
+            <section class="status">
+                <h3>Status</h3>
+                <ul>
+                    <li><a href="#">Latest</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">Ending Soon</a></li>
+                </ul>
+            </section>
+
+            <section class="by-motor">
+                <h3>By Motor</h3>
+                <ul>
+                    <li><a href="#">Electric</a></li>
+                    <li><a href="#">Suzuki</a></li>
+                    <li><a href="#">BMW</a></li>
+                </ul>
+            </section>
+        </aside>
+
+        <section class="content">
+            <div class="filter-options">
+                <div class="view-options">
+                    <button><i class="fas fa-th-list"></i></button>
+                    <button><i class="fas fa-th-large"></i></button>
+                </div>
+                <div class="sort-by">
+                    <label for="sort">Sort By:</label>
+                    <select name="sort" id="sort">
+                        <option value="popularity">Popularity</option>
+                        <option value="latest">Latest</option>
+                        <option value="price">Price</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="coupon-grid">
+                <div class="coupon">
+                    <img src="coupon_image.jpg" alt="Coupon">
+                    <h3>Special Flash Sale</h3>
+                    <p>Get discount on every single categories, to hurry</p>
+                    <a href="#">More Details</a>
+                </div>
+                </div>
+                <div class="pagination">
+                    <button>&laquo;</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>&raquo;</button>
+                </div>
+                <div class="show-offers">
+                    <p>Show 13-24 of 12487 offer</p>
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 CouponZ</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

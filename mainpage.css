@@ -1,0 +1,152 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333; /* Dark gray text color for better contrast */
+}
+
+header {
+    background-color: #333; /* Dark background for header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #fff; /* White background for nav */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 15px; /* Increased padding */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for color too */
+    background-color: #e0e0e0; /* Light gray background for nav items */
+}
+
+nav a:hover {
+    background-color: #333; /* Darker gray on hover */
+    color: white;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.coupon {
+    border: none; /* Removed border */
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    box-sizing: border-box;
+    background-color: #fff; /* White background for coupons */
+    border-radius: 8px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+    transition: transform 0.2s ease;
+    overflow: hidden; /* Hide overflowing content for image rounding */
+}
+
+.coupon:hover {
+    transform: scale(1.03);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.coupon-image {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.coupon-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0; /* Rounded top corners of image */
+}
+
+.coupon-details {
+    text-align: center;
+    padding: 15px; /* Add padding to details */
+}
+
+.coupon h2 {
+    color: #333; /* Darker heading color */
+    margin-bottom: 5px;
+}
+
+.coupon p {
+    color: #666; /* Slightly lighter text color */
+    margin-bottom: 10px;
+}
+
+.coupon button {
+    background-color: #007bff; /* Blue button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 5px; /* Add some margin around buttons */
+}
+
+.coupon button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.flash-sale {
+    border: none; /* Removed border */
+    padding: 10px;
+    margin: 10px;
+    width: 23%;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+    overflow: hidden; /* Hide overflowing image content */
+}
+
+.flash-sale:hover {
+    transform: scale(1.03);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.flash-sale img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.flash-sale p {
+    text-align: center;
+    padding: 10px;
+    color: #666;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}

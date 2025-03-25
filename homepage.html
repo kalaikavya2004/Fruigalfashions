@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frugal Fashion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+    }
+    header {
+        background: #333;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        position: relative;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    header a{
+      margin-left: 1400px;
+    }
+    nav {
+        display: flex;
+        justify-content: space-around;
+        background: #444;
+        padding: 10px;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .profile-sidebar {
+        position: fixed;
+        right: -250px;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background: #222;
+        color: white;
+        transition: right 0.3s ease-in-out;
+        padding: 20px;
+    }
+    .profile-sidebar.active {
+        right: 0;
+    }
+    .profile-sidebar h2 {
+        text-align: center;
+    }
+    .profile-sidebar a {
+        color: white;
+        display: block;
+        text-decoration: none;
+        padding: 10px 0;
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    footer {
+        background: #333;
+        color: white;
+        padding: 40px 0;
+        margin-top: 40px;
+    }
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+</style>
+</head>
+<body class="bg-gray-100">
+
+    <header>
+        <h1>FRUGAL FASHION</h1>
+        <a href="#" onclick="toggleSidebar()">Profile</a>
+    </header>
+
+
+    <div class="profile-sidebar" id="profileSidebar">
+        <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+        <h2>Profile</h2>
+        <a href="myprofile.html" onclick="toggleProfileDetails()">View Profile</a>
+        <a href="orders.html">Orders</a>
+        <a href="whishlist.html">Wishlist</a>
+        <a href="signup.html">Logout</a>
+        <a href="signin.html">Signin</a>
+    </div>
+
+    <main class="container mx-auto p-4">
+        <section class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-xl font-bold mb-4">Welcome to Your Exclusive Discounts Hub</h2>
+            <p class="mb-4">
+                Introducing our game-changing web – your go-to hub for exclusive discounts from top platforms like Amazon, Flipkart, and more. Say goodbye to missing out on limited-time deals; our web ensures you never miss a beat.
+            </p>
+            <p class="mb-4">
+                We're not stopping there – meet PromoCodes, our standout feature. Easily exchange or sell unused PromoCodes, turning them into points or snagging different valuable codes. It's a game-changer for savvy shoppers.
+            </p>
+            <p class="mb-4">
+                Boosting functionality, our web predicts upcoming offers with a dynamic graph, keeping users ahead of the curve. We're not just a web; we're a lifestyle upgrade for smart and informed shopping. Join us in revolutionizing how consumers discover and leverage special offers.
+            </p>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-xl font-bold mb-4">Featured Discounts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-gray-100 p-4 rounded-lg shadow">
+                    <img src="https://storage.googleapis.com/a1aa/image/pAF3d_140ADb-jZokxk2jBSFbr-obBGPVcYcEQro6X0.jpg" alt="Amazon discount banner with 50% off on electronics" class="mb-4 rounded" height="200" width="300"/>
+                    <h3 class="text-lg font-bold mb-2">Amazon - 50% Off on Electronics</h3>
+                    <p class="mb-2">Don't miss out on this limited-time offer on top electronics.</p>
+                    <a class="text-blue-600 hover:underline" href="#">Shop Now</a>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow">
+                    <img src="https://storage.googleapis.com/a1aa/image/0jFRLtXk34IFqG-dDhidNUMyPS_mm-58-ApZlUUV19o.jpg" alt="Flipkart discount banner with 30% off on fashion" class="mb-4 rounded" height="200" width="300"/>
+                    <h3 class="text-lg font-bold mb-2">Flipkart - 30% Off on Fashion</h3>
+                    <p class="mb-2">Upgrade your wardrobe with the latest trends at a discount.</p>
+                    <a class="text-blue-600 hover:underline" href="#">Shop Now</a>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow">
+                    <img src="https://storage.googleapis.com/a1aa/image/qN8kTEEF9kcewZtSKCesAVK5MieFLdiamAq5GMnKrGY.jpg" alt="Walmart discount banner with 20% off on groceries" class="mb-4 rounded" height="200" width="300"/>
+                    <h3 class="text-lg font-bold mb-2">Walmart - 20% Off on Groceries</h3>
+                    <p class="mb-2">Save on your daily essentials with this grocery discount.</p>
+                    <a class="text-blue-600 hover:underline" href="#">Shop Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-xl font-bold mb-4">PromoCodes Exchange</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-gray-100 p-4 rounded-lg shadow">
+                    <img src="https://storage.googleapis.com/a1aa/image/WM6dU8UrvlVNsrKsf5Qe7ZxRPCYBG55xhWtNNkK4VW0.jpg" alt="PromoCode exchange banner with various codes" class="mb-4 rounded" height="200" width="300"/>
+                    <h3 class="text-lg font-bold mb-2">Exchange Your PromoCodes</h3>
+                    <p class="mb-2">Turn your unused PromoCodes into points or exchange them for other valuable codes.</p>
+                    <a class="text-blue-600 hover:underline" href="promocode.html">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto">
+            <div class="footer-content grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="coupon">
+                    <h3 class="text-lg font-semibold mb-4">Coupon</h3>
+                    <p>We offer the best coupons to ensure you get the most value for your money. Stay tuned for the latest deals and discounts.</p>
+                </div>
+                <div class="useful-links">
+                    <h3 class="text-lg font-semibold mb-4">Useful Links</h3>
+                    <ul>
+                        <li><a href="pricingpage.html" class="text-gray-400 hover:text-white">Pricing Plan</a></li>
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="privacypoliy.html" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="recent-tweets">
+                    <h3 class="text-lg font-semibold mb-4">Recent Tweet</h3>
+                    <p>Stay connected with us on Twitter for the latest updates and exclusive offers.</p>
+                </div>
+                <div class="contact-info">
+                    <h3 class="text-lg font-semibold mb-4">We Accept:</h3>
+                    <img src="https://storage.googleapis.com/a1aa/image/jvEFAKj22CvnAap80YlzlEpstO8exMBmaAsgA9ABd0A.jpg" alt="Payment Methods: Logos of various accepted payment methods" class="rounded-lg shadow-lg" height="100" width="300"/>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            let sidebar = document.getElementById("profileSidebar");
+            sidebar.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
